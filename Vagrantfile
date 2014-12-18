@@ -29,6 +29,7 @@ Vagrant.configure(2) do |config|
     s.inline += "sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.list.d/jenkins.list' \n"
     s.inline += "sudo apt-get update \n"
     s.inline += "sudo apt-get install -y jenkins \n"
+    s.inline += "sudo service jenkins start \n"
     s.inline += "echo Jenkins provisioning done!"
   end
 end
